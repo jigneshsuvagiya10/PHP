@@ -11,6 +11,11 @@ session_start();
     <title>Document</title>
     <link rel="stylesheet" href="https://bootswatch.com/5/flatly/bootstrap.css">
     <script src=https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.bundle.min.js></script>
+    <script>
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>
 </head>
 <body>
     
@@ -28,10 +33,10 @@ session_start();
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="features.php">Features</a>
+          <a class="nav-link" href="product.php">Product</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Pricing.php">Pricing</a>
+          <a class="nav-link" href="cart.php">Cart</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="about.php">About</a>
