@@ -1,0 +1,28 @@
+(a)SELECT * FROM order1 where 'order1.AMT>1000'
+SELECT * FROM order1 where AMT>1000
+
+(b)SELECT SNAME,CITY FROM sales_person WHERE COMM>0.10
+SELECT SNAME,CITY FROM sales_person WHERE COMM>0.10 AND CITY='LONDON'
+
+(c)SELECT * FROM sales_person WHERE CITY='BARCELONA' OR 'LONDON'
+SELECT SNAME,CITY FROM sales_person WHERE CITY='London' OR 'Barcelona'
+SELECT SNAME,CITY FROM `sales_person` WHERE CITY IN ( Barcelona , London )
+
+(d)SELECT SNAME,COMM FROM `sales_person` WHERE 0.10<COMM<0.12
+
+(e)SELECT CNAME,CITY FROM customer LEFT JOIN order1 ON customer.CNM=order1.CNM  WRONG
+
+(f)SELECT * FROM order1 where ODE='1994-10-03' AND '1994-10-04'
+SELECT * FROM order1 where ODE IN ('1994-10-03','1994-10-04')
+
+(g)SELECT CNAME FROM customer LEFT JOIN sales_person ON customer.SNO=sales_person.SNO WHERE sales_person.SNAME IN (PEEL,MOTIKA)
+SELECT CNAME FROM customer LEFT JOIN sales_person ON customer.SNO=sales_person.SNO WHERE sales_person.SNAME IN ('PEEL','MOTIKA')
+
+(h)SELECT CNAME FROM customer WHERE CNAME LIKE 'A%'OR CNAME LIKE'B%'
+
+(i)SELECT CNAME FROM customer WHERE RATING>100 OR CITY='ROME'
+
+(j)select * from order1 WHERE AMT!='0' and AMT!='null'
+
+(k)SELECT COUNT(SNO) TOTAL_SALESPERSON FROM sales_person LEFT JOIN order1 ON sales_person.SNO=order1.SNO
+SELECT count(distinct SNO) FROM order1
