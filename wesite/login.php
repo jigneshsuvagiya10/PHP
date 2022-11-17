@@ -6,6 +6,8 @@ if(isset($_POST['login'])){
       
       $_SESSION['userdata']=array("username"=>"tops","location"=>"SG");
 
+      setcookie("userid" ,"TOPS",time() +3600);
+
         header("location:dashbord.php");
     }
     else {
@@ -20,7 +22,7 @@ if(isset($_POST['login'])){
     <div class="row">
         <div class="col-md-4 offset-md-4 mt-5">
         <div class="card border-primary mb-3" >
-                <div class="card-header text-center" > Login</div>
+                <div class="card-header text-center" > For Login</div>
                 <div class="card-body">
     <form action="" method="post">
         <div class="row mt-3">
@@ -37,7 +39,12 @@ if(isset($_POST['login'])){
         </div>
          <div class="row mt-3">
             <div class="col text-center">
-                <input type="submit" class=" btn btn-primary " name="login" id="login">
+                <input type="submit" value="Login" class=" btn btn-primary " name="login" id="login">
+            </div>
+        </div>
+         <div class="row mt-2">
+            <div class="col text-center">
+                  <a href="registration.php" class="text">Registration now</a>
             </div>
         </div>
     </form>

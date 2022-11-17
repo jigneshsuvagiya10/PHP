@@ -26,7 +26,7 @@ if (isset($_REQUEST['saveprod4'])) {
 
 <div class="containar">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col mt-3 md-3">
             <div class="card" >
             <img src="image\iphone14.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -45,7 +45,7 @@ if (isset($_REQUEST['saveprod4'])) {
             </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col mt-3 md-3">
         <div class="card" >
             <img src="image\iphone13.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -64,7 +64,7 @@ if (isset($_REQUEST['saveprod4'])) {
             </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col mt-3 md-3">
         <div class="card" >
             <img src="image\iphone12.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -83,7 +83,7 @@ if (isset($_REQUEST['saveprod4'])) {
             </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col mt-3 md-3">
         <div class="card" >
             <img src="image\iphone11.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
