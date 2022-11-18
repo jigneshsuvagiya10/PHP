@@ -36,7 +36,7 @@ session_start();
           <a class="nav-link" href="product.php">Product</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="cart.php">Cart</a>
+          <a class="nav-link" href="cart.php">Cart & Note</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="note.php">Note</a>
@@ -45,6 +45,7 @@ session_start();
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="registration.php">Registrtion</a>
             <div class="dropdown-divider"></div>
             <?php if (isset($_SESSION['userdata'])) {?>
               <a class="dropdown-item" href="logout.php">logout</a>

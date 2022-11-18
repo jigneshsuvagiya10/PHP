@@ -21,10 +21,10 @@ if(isset($_POST['login'])){
 <div class="container">
     <div class="row">
         <div class="col-md-4 offset-md-4 mt-5">
-        <div class="card border-primary mb-3" >
+        <div class="card border-primary " >
                 <div class="card-header text-center" > For Login</div>
                 <div class="card-body">
-    <form action="" method="post">
+    <form method="post">
         <div class="row mt-3">
             <div class="col ">
                 <input type="text" class="form-control" placeholder="Enter user name" name="username" id="username">
