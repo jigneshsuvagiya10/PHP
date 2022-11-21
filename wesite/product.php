@@ -31,8 +31,8 @@ if (isset($_REQUEST['saveprod4'])) {
             <img src="image\iphone14.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title">iphone14</h5>
-            <li>price : 100000</li>
             <ul>
+                <li>price : 100000</li>
                 <li>qunatity : 1</li>
             </ul>
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
