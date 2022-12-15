@@ -29,6 +29,6 @@ echo "<br>";
 echo $sam->sum3(4,5,6);
 echo "<br>";
 
-echo $sam->sum3(9, 8, 7, );
+echo $sam->sum3(9, 8, 9);
 
 ?>

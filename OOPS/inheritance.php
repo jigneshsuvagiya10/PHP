@@ -28,5 +28,7 @@ $math = new avr;
 $math->avrage(5, 5);
 echo "<br>";
 echo $math->add(2, 3);
+echo "<br>";
+echo $math->add(5, 30);
 
 ?>
