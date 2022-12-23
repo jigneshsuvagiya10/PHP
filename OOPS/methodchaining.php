@@ -36,3 +36,4 @@ echo $obj-> select('*')->from('user')->where("userid='1'")->sql;
 <p>every method return this keyword as that return query store varible<p>
 <p>we want to add one method after another for that we add . befor assign value of query(.="value")<p>
 <p>.= add in that function which append after one method. <p>
+    
