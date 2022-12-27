@@ -50,6 +50,9 @@
                                 <li class="nav-item @@contact-active">
                                     <a class="nav-link" href="contact">Contact</a>
                                 </li>
+                                <li class="nav-item @@contact-active">
+                                    <a class="nav-link" href="login">login</a>
+                                </li>
                             </ul>
                         </div>
                     </nav>

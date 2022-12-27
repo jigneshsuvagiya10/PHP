@@ -11,9 +11,12 @@ class controller{
     public function __construct()
     {
         $base_url = "http://localhost/php/MVC/";
-        
-        switch ($_SERVER['PATH_INFO']) {
-            case '/home':
+
+
+
+        if (isset($_SERVER['PATH_INFO'])) {
+            switch ($_SERVER['PATH_INFO']) {
+                case '/home':
                 
                 include_once("views/header.php");
                 include_once("views/homepage.php");
@@ -39,11 +42,37 @@ class controller{
                 include_once("views/header.php");
                 echo "<h1>Contact</h1>";
                 include_once("views/footer.php");
-        
+                
                 break;
-           
+            case '/login':
+                
+                include_once("views/header.php");
+                include_once("views/login.php");
+                include_once("views/footer.php");
+                
+                break;
+            case '/registration':
+                
+                include_once("views/header.php");
+                include_once("views/registration.php");
+                include_once("views/footer.php");
+
+                if (isset($_REQUEST["reg"])) {
+
+                        print_r($_REQUEST);
+                }
+
+
+
             
-        }
+                
+                break;
+                
+            }
+                
+            }else {
+                    header("location:home");
+            }
     }
 }
 
