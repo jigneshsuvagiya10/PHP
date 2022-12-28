@@ -1,15 +1,19 @@
 <?php
-
+require_once("model/model.php");
 // echo "<pre>";
 
 // print_r($_SERVER);
 
 
 
-class controller{
+class controller extends model{
     
     public function __construct()
     {
+        parent::__construct();
+
+        // echo "called controller";
+
         $base_url = "http://localhost/php/MVC/";
 
 
@@ -59,7 +63,10 @@ class controller{
 
                 if (isset($_REQUEST["reg"])) {
 
+                        array_pop($_REQUEST);
                         print_r($_REQUEST);
+
+                        $this->insert("users",$_REQUEST);
                 }
 
 
