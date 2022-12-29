@@ -53,12 +53,11 @@ class model{
             $responsedata['data'] = "0";
         }
 
-        return $responsedata;
-        
-
         // echo "<pre>";
         // print_r($sql);
         // echo "</pre>";
+
+        return $responsedata;
     }
     public function update(){}
     public function delete(){}

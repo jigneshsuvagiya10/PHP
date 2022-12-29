@@ -64,9 +64,18 @@ class controller extends model{
                 if (isset($_REQUEST["reg"])) {
 
                         array_pop($_REQUEST);
-                        print_r($_REQUEST);
+                        // print_r($_REQUEST);
 
-                        $this->insert("users",$_REQUEST);
+                     $reg = $this->insert("users",$_REQUEST);
+
+                     if ($reg['code']== 1) {
+
+                            header("location:login");
+
+                     } else {
+                            echo "ERROR";
+                     }
+                     
                 }
 
 
