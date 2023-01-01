@@ -1,5 +1,5 @@
 <?php
-mysqli_report(MYSQLI_REPORT_ALL) ;//used for version php 7
+// mysqli_report(MYSQLI_REPORT_ALL) ;//used for version php 7
 date_default_timezone_set('Asia/Kolkata');    //to set to current location time
 
 // error_reporting(0);
@@ -34,6 +34,34 @@ class model{
         // echo "</pre>";
     }
 
+    public function login($uname,$pass){
+
+        $sql ="SELECT * FROM user WHERE  (name='$uname' OR email='$uname' OR mobile='$uname') AND password='$pass' ";
+        // echo $sql;
+        $SQLEx = $this->connection->query($sql); 
+
+        if ($SQLEx->num_rows > 0) {
+            
+            while ($SQLExFetch = $SQLEx->fetch_object()) {
+            
+                $sqlfetchdata[]= $SQLExFetch;
+            }
+            // $SQLExFetch = $SQLEx->fetch_object(); // return object;
+    
+            // echo "<pre>";
+            // print_r($sqlfetchdata);
+            // echo "</pre>";
+            $responsedata['code'] = "1";
+            $responsedata['msg'] = "SUCCSESS";
+            $responsedata['data'] = $sqlfetchdata;
+        } else {
+            $responsedata['code'] = "0";
+            $responsedata['msg'] = "ERROR WHILE INSERTING";
+            $responsedata['data'] = "0";
+        }
+        
+        return $responsedata;
+    }
     public function select(){}
     public function insert($tbl,$data){
 

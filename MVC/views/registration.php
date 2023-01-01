@@ -20,13 +20,13 @@
                     </div>
                     <div class="row mt-3">
                         <div class="col">
-                            <label for="inputuserid" ><h6>Userid</h6></label>
-                            <input type="text" class="form-control" placeholder="userid" name="userid" id="userid">
+                            <label for="inputmobile" ><h6>Mobile</h6></label>
+                            <input type="text" class="form-control" placeholder="XXXXXXXXXX" name="mobile" id="mobile">
                         </div>
                     </div>
                     <div class="row mt-3">
                         <div class="col">
-                            <label for="inputuserid" ><h6>Password</h6></label>
+                            <label for="inputpassword" ><h6>Password</h6></label>
                             <input type="password" class="form-control" placeholder="password" name="password" id="password">
                         </div>
                     </div>

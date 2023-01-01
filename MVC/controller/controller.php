@@ -4,6 +4,8 @@ require_once("model/model.php");
 
 // print_r($_SERVER);
 
+session_start();
+
 
 
 class controller extends model{
@@ -11,6 +13,7 @@ class controller extends model{
     public function __construct()
     {
         parent::__construct();
+        ob_start();
 
         // echo "called controller";
 
@@ -53,6 +56,43 @@ class controller extends model{
                 include_once("views/header.php");
                 include_once("views/login.php");
                 include_once("views/footer.php");
+
+                    if (isset($_REQUEST["login"])) {
+
+                        $log = $this->login($_POST["name"], $_POST["password"]);
+
+                        if ($log['code']==1) {
+
+                            $_SESSION['userdata'] = $log['data'][0];
+
+                            if ($log['data'][0]->no == 2) {
+                                header('location:admindashbord');
+                            } else {
+                                header('location:home');
+                            }
+                                # code...
+                                // echo "<pre>";
+                                // print_r($log['data'][0]->no);
+                                // echo "</pre>";
+                            
+                            
+                        } else {
+                            echo "<script>alert('Invelid name OR password')</script>";
+                        }
+                        
+
+                        // echo "<pre>";
+                        // print_r($log);
+                        // echo "</pre>";
+                    }
+
+                //  if ($reg['code']== 1) {
+       
+                //         header("location:login");
+
+                //  } else {
+                //         echo "ERROR";
+                //  }
                 
                 break;
             case '/registration':
@@ -66,7 +106,7 @@ class controller extends model{
                         array_pop($_REQUEST);
                         // print_r($_REQUEST);
 
-                     $reg = $this->insert("users",$_REQUEST);
+                     $reg = $this->insert("user",$_REQUEST);
 
                      if ($reg['code']== 1) {
 
@@ -89,6 +129,7 @@ class controller extends model{
             }else {
                     header("location:home");
             }
+        ob_flush();
     }
 }
 

@@ -1,7 +1,7 @@
-<script>
+<!-- <script>
 if ( window.history.replaceState ) {
     window.history.replaceState( null, null, window.location.href );
 }
-</script>
+</script> -->
 
 <?php include_once("controller/controller.php") ?>

@@ -9,7 +9,7 @@
     <form method="post">
         <div class="row mt-3">
             <div class="col ">
-                <input type="text" class="form-control" placeholder="Enter user name" name="username" id="username">
+                <input type="text" class="form-control" placeholder="Enter name" name="name" id="name">
                 
             </div>
         </div>
