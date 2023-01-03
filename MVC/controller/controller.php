@@ -37,6 +37,12 @@ class controller extends model{
                 include_once("views/footer.php");
         
                 break;
+            case '/admindashbord':
+                
+                include_once("views/header.php");
+                include_once("views/admindashbord.php");
+                include_once("views/footer.php");
+                break;
             case '/services':
                 
                 include_once("views/header.php");
