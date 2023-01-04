@@ -18,7 +18,7 @@ class controller extends model{
         // echo "called controller";
 
         $base_url = "http://localhost/php/MVC/";
-
+        $admin_url = "http://localhost/php/MVC/assets/adminassets/";
 
 
         if (isset($_SERVER['PATH_INFO'])) {
@@ -37,11 +37,11 @@ class controller extends model{
                 include_once("views/footer.php");
         
                 break;
-            case '/admindashbord':
+            case '/adminhome':
                 
-                include_once("views/header.php");
-                include_once("views/admindashbord.php");
-                include_once("views/footer.php");
+                include_once("views/admin/adminheader.php");
+                include_once("views/admin/adminhome.php");
+                include_once("views/admin/adminfooter.php");
                 break;
             case '/services':
                 
@@ -72,7 +72,7 @@ class controller extends model{
                             $_SESSION['userdata'] = $log['data'][0];
 
                             if ($log['data'][0]->no == 2) {
-                                header('location:admindashbord');
+                                header('location:adminhome');
                             } else {
                                 header('location:home');
                             }
@@ -124,10 +124,6 @@ class controller extends model{
                      
                 }
 
-
-
-            
-                
                 break;
                 
             }
