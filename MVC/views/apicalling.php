@@ -36,6 +36,6 @@
                 // console.log(element.name);
             });
             console.log(htmlulli);
-            $("#dispdata").html(htmlulli)
+            $("#dispdata").html(htmlulli);
     })
 </script>
