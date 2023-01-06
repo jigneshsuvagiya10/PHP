@@ -19,6 +19,7 @@ class controller extends model{
 
         $base_url = "http://localhost/php/MVC/";
         $admin_url = "http://localhost/php/MVC/assets/adminassets/";
+        
 
 
         if (isset($_SERVER['PATH_INFO'])) {
@@ -54,6 +55,13 @@ class controller extends model{
                 
                 include_once("views/header.php");
                 echo "<h1>Contact</h1>";
+                include_once("views/footer.php");
+                
+                break;
+            case '/api':
+                
+                include_once("views/header.php");
+                include_once("views/apicalling.php");
                 include_once("views/footer.php");
                 
                 break;

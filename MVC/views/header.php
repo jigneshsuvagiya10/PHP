@@ -13,7 +13,7 @@
     
         <!-- Google fonts -->
         <!-- <link href="//fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"> -->
-        <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+        <!-- <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet"> -->
     
         <!-- Template CSS -->
         <link rel="stylesheet" href="<?php echo $base_url;?>assets/css/style-starter.css">
@@ -52,6 +52,8 @@
                                 </li>
                                 <li class="nav-item @@contact-active">
                                     <a class="nav-link" href="login">login</a>
+                                <li class="nav-item @@contact-active">
+                                    <a class="nav-link" href="api">API calling</a>
                                 </li>
                             </ul>
                         </div>

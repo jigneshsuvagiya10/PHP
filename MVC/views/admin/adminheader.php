@@ -1,170 +1,248 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<title>Pooled Admin Panel Category Flat Bootstrap Responsive Web Template | Home :: w3layouts</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Pooled Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- Bootstrap Core CSS -->
-<link href="  <?php echo $admin_url;?>css/bootstrap.min.css" rel='stylesheet' type='text/css' />
-<!-- Custom CSS -->
-<link href="  <?php echo $admin_url;?>css/style.css" rel='stylesheet' type='text/css' />
-<link rel="stylesheet" href="  <?php echo $admin_url;?>css/morris.css" type="text/css"/>
-<!-- Graph CSS -->
-<link href="  <?php echo $admin_url;?>css/font-awesome.css" rel="stylesheet"> 
-<!-- jQuery -->
-<script src="  <?php echo $admin_url;?>js/jquery-2.1.4.min.js"></script>
-<!-- //jQuery -->
-<!-- <link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'/> -->
-<!-- <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> -->
-<!-- lined-icons -->
-<link rel="stylesheet" href="  <?php echo $admin_url;?>css/icon-font.min.css" type='text/css' />
-<!-- //lined-icons -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<div class="header-main ">
+  <title>Dashboard</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-					<div class="logo-w3-agile">
-								<h1><a href="index.html">ADMIN</a></h1>
-							</div>
-					<div class="w3layouts-left">
-							
-							<!--search-box-->
-								<div class="w3-search-box">
-									<form action="#" method="post">
-										<input type="text" placeholder="Search..." required="">	
-										<input type="submit" value="">					
-									</form>
-								</div><!--//end-search-box-->
-							<div class="clearfix"> </div>
-						 </div>
-						 <div class="w3layouts-right">
-							<div class="profile_details_left"><!--notifications of menu start -->
-								<ul class="nofitications-dropdown">
-									<li class="dropdown head-dpdn">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-envelope"></i><span class="badge">1</span></a>
-										<ul class="dropdown-menu">
-											<li>
-												<div class="notification_header">
-													<h3>You have new messages</h3>
-												</div>
-											</li>
-											<li><a href="#">
-											   <div class="user_img"><img src="  <?php echo $admin_url;?>images/in9.jpg" alt=""></div>
-											   <div class="notification_desc">
-												<p>Lorem ipsum dolor</p>
-												<p><span>1 hour ago</span></p>
-												</div>
-											   <div class="clearfix"></div>	
-											</a></li>
-											<li>
-												<div class="notification_bottom">
-													<a href="#">See all messages</a>
-												</div> 
-											</li>
-										</ul>
-									</li>
-									<li class="dropdown head-dpdn">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge blue">2</span></a>
-										<ul class="dropdown-menu">
-											<li>
-												<div class="notification_header">
-													<h3>You have 2 new notification</h3>
-												</div>
-											</li>
-											 <li class="odd"><a href="#">
-												<div class="user_img"><img src="  <?php echo $admin_url;?>images/in6.jpg" alt=""></div>
-											   <div class="notification_desc">
-												<p>Lorem ipsum dolor</p>
-												<p><span>1 hour ago</span></p>
-												</div>
-											   <div class="clearfix"></div>	
-											 </a></li>
-											 <li><a href="#">
-												<div class="user_img"><img src="  <?php echo $admin_url;?>images/in4.jpg" alt=""></div>
-											   <div class="notification_desc">
-												<p>Lorem ipsum dolor</p>
-												<p><span>1 hour ago</span></p>
-												</div>
-											   <div class="clearfix"></div>	
-											 </a></li>
-											 <li>
-												<div class="notification_bottom">
-													<a href="#">See all notifications</a>
-												</div> 
-											</li>
-										</ul>
-									</li>	
-									<li class="dropdown head-dpdn">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-tasks"></i><span class="badge blue1">2</span></a>
-										<ul class="dropdown-menu">
-											<li>
-												<div class="notification_header">
-													<h3>You have 2 pending task</h3>
-												</div>
-											</li>
-											<li><a href="#">
-												<div class="task-info">
-													<span class="task-desc">Dashboard done</span><span class="percentage">90%</span>
-												   <div class="clearfix"></div>	
-												</div>
-												<div class="progress progress-striped active">
-													 <div class="bar green" style="width:90%;"></div>
-												</div>
-											</a></li>
-											<li><a href="#">
-												<div class="task-info">
-													<span class="task-desc">Mobile App</span><span class="percentage">33%</span>
-													<div class="clearfix"></div>	
-												</div>
-											   <div class="progress progress-striped active">
-													 <div class="bar red" style="width: 33%;"></div>
-												</div>
-											</a></li>
-											<li>
-												<div class="notification_bottom">
-													<a href="#">See all pending tasks</a>
-												</div> 
-											</li>
-										</ul>
-									</li>	
-									<div class="clearfix"> </div>
-								</ul>
-								<div class="clearfix"> </div>
-							</div>
-							<!--notification menu end -->
-							
-							<div class="clearfix"> </div>				
-						</div>
-						<div class="profile_details w3l">		
-								<ul>
-									<li class="dropdown profile_details_drop">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-											<div class="profile_img">	
-												<span class="prfil-img"><img src="  <?php echo $admin_url;?>images/in7.jpg" alt=""> </span> 
-												<div class="user-name">
-													<p>Tom</p>
-													<span>Administrator</span>
-												</div>
-												<i class="fa fa-angle-down"></i>
-												<i class="fa fa-angle-up"></i>
-												<div class="clearfix"></div>	
-											</div>	
-										</a>
-										<ul class="dropdown-menu drp-mnu">
-											<li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li> 
-											<li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-							
-				     <div class="clearfix"> </div>	
-				</div>
+  <!-- Favicons -->
+  <link href="<?php echo $admin_url;?>img/favicon.png" rel="icon">
+  <link href="<?php echo $admin_url;?>img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <!-- <link href="https://fonts.gstatic.com" rel="preconnect"> -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"> -->
+
+  <!-- Vendor CSS Files -->
+  <link href="<?php echo $admin_url;?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?php echo $admin_url;?>vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="<?php echo $admin_url;?>vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="<?php echo $admin_url;?>vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="<?php echo $admin_url;?>vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="<?php echo $admin_url;?>vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="<?php echo $admin_url;?>vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="<?php echo $admin_url;?>css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.5.0
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index" class="logo d-flex align-items-center">
+        <img src="<?php echo $admin_url;?>img/logo.png" alt="">
+        <span class="d-none d-lg-block">NiceAdmin</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">1</span>
+          </a><!-- End Notification Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              You have 1 new notifications
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Lorem Ipsum</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>30 min. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Show all notifications</a>
+            </li>
+
+          </ul><!-- End Notification Dropdown Items -->
+
+        </li><!-- End Notification Nav -->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success badge-number">1</span>
+          </a><!-- End Messages Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+            <li class="dropdown-header">
+              You have 1 new messages
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="<?php echo $admin_url;?>img/messages-1.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Maria Hudson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>4 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+          
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="dropdown-footer">
+              <a href="#">Show all messages</a>
+            </li>
+
+          </ul><!-- End Messages Dropdown Items -->
+
+        </li><!-- End Messages Nav -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="<?php echo $admin_url;?>img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Kevin Anderson</h6>
+              <span>Web Designer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="index">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="tables-general">
+              <i class="bi bi-circle"></i><span>General Tables</span>
+            </a>
+          </li>
+          <li>
+            <a href="tables-data">
+              <i class="bi bi-circle"></i><span>Data Tables</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Tables Nav -->
+
+
+      <li class="nav-heading">Pages</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="users-profile">
+          <i class="bi bi-person"></i>
+          <span>Profile</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-contact">
+          <i class="bi bi-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </li><!-- End Contact Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-login">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Login</span>
+        </a>
+      </li><!-- End Login Page Nav -->
+
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+  </body>
+
+</html>
