@@ -369,7 +369,7 @@
                 </div>
             </div>
             <div class="col_50">
-                <form class="forme_color" action="#" method="post">
+                <form class="forme_color"  method="post">
                     <input type="text" placeholder="Name">
                     <input type="tel" placeholder="Mobile number">
                     <select name="course" id="">
@@ -377,17 +377,11 @@
                         <option value="Online Course">Offline Admission</option>
                     </select>
                     <select name="course" id=""> 
-                        <option value="General Class 3">General Class 3</option>
-                        <option value="TET / TAT">TET / TAT</option>
-                        <option value="GPSC Class 1/2">GPSC Class 1/2</option>
-                        <option value="Forest Guard">Forest Guard</option>
-                        <option value="Talati &amp; Jr. Clerk">Talati &amp; Jr. Clerk</option>
-                        <option value="GPSC Mains">GPSC Mains</option>
-                        <option value="Other">Other</option>
+                        <option value="JEE">JEE</option>
+                        <option value="NEET">NEET</option>
                     </select>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-                    <div class="g-recaptcha" data-sitekey="your_site_key"></div>
-                    <button type="submit">Submit</button>
+                    <input type="submit" class="btn btn-danger" value="submit" name="reg" id="reg">
+                    <?php if (isset($_REQUEST["reg"])) {header("location:registration");}?>
                 </form>
             </div>
         </div>

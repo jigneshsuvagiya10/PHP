@@ -40,6 +40,11 @@ class controller{
                     include_once("views/contact.php");
                     //include_once("views/footer.php");
                     break;
+                case '/registration':
+                    include_once("views/header.php");
+                    include_once("views/registration.php");
+                    include_once("views/footer.php");
+                    break;
             
             }
     }else {
