@@ -10,6 +10,7 @@
                 <form class="forme_color" action="#" method="post">
                     <input type="text" placeholder="Name">
                     <input type="tel" placeholder="Mobile number">
+                    <input type="email" placeholder="Email">
                     <select name="course" id="">
                         <option value="Online Course">Online Course</option>
                         <option value="Online Course">Offline Admission</option>
