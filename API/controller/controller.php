@@ -89,27 +89,13 @@ class controller extends model{
                 //  }
                 
                 break;
-            case '/registration':
-                
-                include_once("views/header.php");
-                include_once("views/registration.php");
-                include_once("views/footer.php");
-
-                if (isset($_REQUEST["reg"])) {
-
-                        array_pop($_REQUEST);
-                        // print_r($_REQUEST);
-
-                     $reg = $this->insert("user",$_REQUEST);
-
-                     if ($reg['code']== 1) {
-
-                            header("location:login");
-
-                     } else {
-                            echo "ERROR";
-                     }
-                     
+                case '/registration':
+                    $data = json_decode(file_get_contents('php://input'), true);
+                if ($data['name'] != "" && $data['password'] != "") {
+                     $reg = $this->insert("user",$data);
+                        echo json_encode($reg);
+                }else {
+                        echo "name and password required";
                 }
 
                 break;
@@ -124,5 +110,3 @@ class controller extends model{
 }
 
 $controller = new controller;
-
-?>

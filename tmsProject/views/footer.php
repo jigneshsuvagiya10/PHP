@@ -4,7 +4,8 @@
             <div class="row">
                 <div class="col_25 f_ma">
                     <div class="logo_img">
-                        <img src="./img/websankul-logo.webp" alt="">
+                        Logo addd
+                        <img src="#" alt="">
                     </div>
                     <div class="logo_text">
                         <p>© 2022 WebSankul Pvt. Ltd. All rights reserved.</p>
@@ -55,12 +56,11 @@
                             <ul>
                                 <li><a href="#">about</a></li>
                                 <li><a href="#">contact</a></li>
-                                <li><a href="#">privacy policy </a></li>
+                                <li><a href="Privacy.html">privacy policy </a></li>
                                 <li><a href="#">Mission GPSC</a></li>
-                                <li><a href="#">trems & conditions </a></li>
+                                <li><a href="Conditions.html">trems & conditions </a></li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -69,14 +69,20 @@
 
 
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
-    </script>
-    <script type="text/javascript">
-        var onloadCallback = function() {
+ </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script type="text/javascript">
+        var onloadCallback = function () {
             // alert("grecaptcha is ready!");
         };
-    </script>
+    </script> -->
 
+    <script src="<?php echo $BaseURL;?>js/custom.js" defer></script>
 
 </body>
 
