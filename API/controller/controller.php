@@ -90,7 +90,9 @@ class controller extends model{
                 
                 break;
                 case '/registration':
+
                     $data = json_decode(file_get_contents('php://input'), true);
+                    print_r($data);
                 if ($data['name'] != "" && $data['password'] != "") {
                      $reg = $this->insert("user",$data);
                         echo json_encode($reg);

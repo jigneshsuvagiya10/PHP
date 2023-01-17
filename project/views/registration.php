@@ -77,10 +77,11 @@
             },
             body: JSON.stringify(result) // body data type must match "Content-Type" header
         };
-        fetch("http://localhost/php/API/registration", {
+        console.log(form_post_api);
+        fetch("http://localhost/php/API/registration", 
             form_post_api
-        }).then(res => res.json()).then((response) => {
-            console.log(response);
+        ).then(response => response.json()).then((res) => {
+            console.log(res);
         })
     }
 
