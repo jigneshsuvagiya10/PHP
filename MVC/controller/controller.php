@@ -89,24 +89,13 @@ class controller extends model{
                                 // print_r($log['data'][0]->no);
                                 // echo "</pre>";
                             
-                            
                         } else {
                             echo "<script>alert('Invelid name OR password')</script>";
                         }
-                        
-
                         // echo "<pre>";
                         // print_r($log);
                         // echo "</pre>";
                     }
-
-                //  if ($reg['code']== 1) {
-       
-                //         header("location:login");
-
-                //  } else {
-                //         echo "ERROR";
-                //  }
                 
                 break;
             case '/registration':

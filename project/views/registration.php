@@ -59,7 +59,7 @@
 
 <script>
     function registerdata() {
-        event.preventDefault();
+        // event.preventDefault();
         let formdata = $("#regform").serializeArray();
         console.log(formdata);
         var result = {};
