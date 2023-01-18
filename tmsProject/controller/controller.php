@@ -30,9 +30,19 @@ class controller extends model{
                     include_once('Views/footer.php');
                     break;
         
-                case '/material':
+                // case '/material':
+                //     include_once('Views/header.php');
+                //     include_once('Views/materials.php');
+                //     include_once('Views/footer.php');
+                //     break;
+                case '/jee':
                     include_once('Views/header.php');
-                    include_once('Views/materials.php');
+                    include_once('Views/jee.php');
+                    include_once('Views/footer.php');
+                    break;
+                case '/neet':
+                    include_once('Views/header.php');
+                    include_once('Views/neet.php');
                     include_once('Views/footer.php');
                     break;
                 case '/privacy':
@@ -41,9 +51,9 @@ class controller extends model{
                     include_once('Views/footer.php');
                     break;
                 
-                case '/currentaffair':
+                case '/ourcorse':
                     include_once('Views/header.php');
-                    include_once('Views/current_affairs.php');
+                    include_once('Views/ourcorse.php');
                     include_once('Views/footer.php');
                     break;
                 case '/about':

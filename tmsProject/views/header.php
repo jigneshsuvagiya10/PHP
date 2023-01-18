@@ -31,22 +31,22 @@
                 <div class="col">
                     <div class="logo">
                         <button class="bar"><i class="fa fa-2x fa-bars"></i></button>
-                        <h1>Logo</h1>
+                        <h1>TMS</h1>
                     </div>
                 </div>
                 <div class="col">
                     <div class="header_text">
                         <ul>
                             <li><a href="home">home</a></li>
-                            <li class="dropdown"><a href="currentaffair">Current Affairs<i
+                            <li class="dropdown"><a href="ourcorse">Our Course<i
                                         class="fa-solid fa-caret-down"></i></a>
                                 <ul class="dropdown-nav">
-                                    <li><a href="#">JEE</a></li>
-                                    <li><a href="#">NEET</a></li>
+                                    <li><a href="jee">JEE</a></li>
+                                    <li><a href="neet">NEET</a></li>
                                     
                                 </ul>
                             </li>
-                            <li><a href="material">Materials</a></li>
+                            <!-- <li><a href="material">Materials</a></li> -->
                             <li><a href="contact">Contact Us</a></li>
                             <li><a href="about">About Us</a></li>
                         </ul>
