@@ -34,10 +34,9 @@
 <script>
   function logindata() {
     event.preventDefault();
-
+    // alert("caa");
     let logform = $('#loginform').serializeArray();
     // console.log(logform);
-    
     var str = {};
     $.each(logform,function() {
       str[this.name]=this.value;    
@@ -48,19 +47,27 @@
       body: JSON.stringify(str) // body data type must match "Content-Type" header
     }
     // console.log(header_for_post);
-
-    
          fetch("http://localhost/php/API/login", header_for_post).then(response => response.json()).then((res) => {
-             console.log(res);
+            //  console.log(res.data[0].no);
+             if (res.code == 1) {
+              // document.cookie = "name=oeschger; SameSite=None; Secure";
+              document.cookie = "name="+res.data[0].no+"; SameSite=None; Secure";
+                if (res.data[0].no == 2) {
+                  window.location.href="adminhome";
+                } else {
+                  window.location.href="home";
+                }
+             } else {
+              alert("invalid user");
+             }
             //data=  $.parseJSON(res)
             //console.log(res.getValue(Code));
          })
-
   }
 
   $().ready(function() {
     // validate the comment form when it is submitted
-    // $("#commentForm").validate();
+    // $("#loginform").validate();
     $("#loginform").validate({
       rules: {
         name: {

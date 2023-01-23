@@ -56,7 +56,7 @@ class model{
             $responsedata['data'] = $sqlfetchdata;
         } else {
             $responsedata['code'] = "0";
-            $responsedata['msg'] = "ERROR WHILE INSERTING";
+            $responsedata['msg'] = "NO DATA FOUND";
             $responsedata['data'] = "0";
         }
         
