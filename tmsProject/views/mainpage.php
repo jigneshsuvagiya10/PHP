@@ -483,19 +483,17 @@
         // console.log(result);
         let post = {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
-            mode: 'cors', // no-cors, *cors, same-origin
-            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-            credentials: 'same-origin', // include, *same-origin, omit
-            headers: {
-                'Content-Type': 'application/json'
-            },
             body: JSON.stringify(result) // body data type must match "Content-Type" header
         }
-
-        fetch("http://localhost/php/tmsProject/API/inquiry", post).then(responce => json.responce()).then(res => {
-            console.log(res);
-            //         $data=json.decode(res);
-            //         echo $data['name'];
-        })
+        // console.log(result);
+            fetch("http://localhost/php/tmsProject/API/inquiry", post).then(res => res.json()).then((response) => {
+                console.log(response);
+                if (response.Code == 1) {
+                    window.location.href="http://localhost/php/tmsProject/contact";
+                }
+                else{
+        
+                }
+            });
     }
 </script>
