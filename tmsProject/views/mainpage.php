@@ -486,14 +486,18 @@
             body: JSON.stringify(result) // body data type must match "Content-Type" header
         }
         // console.log(result);
-            fetch("http://localhost/php/tmsProject/API/inquiry", post).then(res => res.json()).then((response) => {
-                console.log(response);
-                if (response.Code == 1) {
-                    window.location.href="http://localhost/php/tmsProject/contact";
+        fetch("http://localhost/php/tmsProject/API/inquiry", post).then(res => res.json()).then((response) => {
+            console.log(response);
+            if (response.Code == 1) {
+                if (response.Data.course == "JEE") {
+                    window.location.href = "http://localhost/php/tmsProject/jee";
                 }
-                else{
-        
+                if (response.Data.course == "NEET") {
+                    window.location.href = "http://localhost/php/tmsProject/neet";
                 }
-            });
+            } else {
+            
+            }
+        });
     }
 </script>
