@@ -2,6 +2,12 @@
 require_once("model/model.php");
 session_start();
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+//Load Composer's autoloader
+require 'vendor/autoload.php';
+
 class controller extends model
 {
 
@@ -50,6 +56,9 @@ class controller extends model
                     include_once("views/footer.php");
 
                     break;
+                case '/sendmail':
+                    $send = $this->sendemail();
+                    break;
                 case '/login':
 
                     $data = json_decode(file_get_contents('php://input'), true);
@@ -72,7 +81,7 @@ class controller extends model
                         // echo "<pre>";
                         // print_r($log);
                         // echo "</pre>";
-                    }else{
+                    } else {
                         echo "User Name and Password is required";
                     }
 
@@ -92,13 +101,9 @@ class controller extends model
                     if ($data['name'] != "" && $data['password'] != "") {
                         $reg = $this->insert("user", $data);
                         echo json_encode($reg);
-                        //     if (res== 1) {
+                        $this->sendemail($data['email']);
+                        // print_r($reg);
 
-                        //         header("location:login");
-
-                        //  } else {
-                        //         echo "name and password required 1";
-                        //  }
                     } else {
                         echo "name and password required";
                     }
@@ -109,6 +114,34 @@ class controller extends model
             header("location:home");
         }
         ob_flush();
+    }
+
+    public function sendemail($mail)
+    {
+        $mail = new PHPMailer(true);
+        if (isset($_POST['sendmail'])) {
+            $mail->isSMTP();                            // Set mailer to use SMTP
+            $mail->Host = 'smtp.gmail.com';              // Specify main and backup SMTP servers
+            $mail->SMTPAuth = true;                     // Enable SMTP authentication
+            $mail->Username   = 'jay.tops.sg@gmail.com';                     //SMTP username
+            $mail->Password   = 'cvurgazurisiifxh';  // your password 2step varified 
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port = 587;     //587 is used for Outgoing Mail (SMTP) Server.
+            $mail->setFrom('jay.tops.sg@gmail.com', 'Name');
+            $mail->addAddress($mail);   // Add a recipient
+            $mail->isHTML(true);  // Set email format to HTML
+
+            $bodyContent = "<h1>HeY!,</h1>";
+            $bodyContent .= '<p> registration succsess</p>';
+            $mail->Body    = $bodyContent;
+            $mail->Subject = 'Email from Jignesh';
+            // if (!$mail->send()) {
+            //     echo 'Message was not sent.';
+            //     echo 'Mailer error: ' . $mail->ErrorInfo;
+            // } else {
+            //     echo 'Message has been sent.';
+            // }
+        }
     }
 }
 

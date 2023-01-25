@@ -1,27 +1,19 @@
 <?php
 // echo "<pre>";
-
 // print_r($_SERVER);
-
 session_start();
-
-
 
 class controller {
     // public $BaseURLDynamic = "";
     public function __construct()
     {
         ob_start();
-
         // echo "called controller";
-
         // $base_url = "http://localhost/php/project/";
         $admin_url = "http://localhost/php/project/assets/adminassets/";
         $uriarray = explode("/",$_SERVER['REQUEST_URI']);
         $BaseURLDynamic = $_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']."/".$uriarray[1]."/".$uriarray[2]."/assets/";
         // echo $BaseURLDynamic;
-
-
         if (isset($_SERVER['PATH_INFO'])) {
             switch ($_SERVER['PATH_INFO']) {
                 case '/home':

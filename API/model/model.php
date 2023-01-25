@@ -95,7 +95,7 @@ class model{
         if ($SQLEx > 0) {
             $responsedata['code'] = "1";
             $responsedata['msg'] = "SUCCSESS";
-            $responsedata['data'] = "1";
+            $responsedata['data'] = $data;
         } else {
             $responsedata['code'] = "0";
             $responsedata['msg'] = "ERROR WHILE INSERTING";

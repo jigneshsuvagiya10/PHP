@@ -119,10 +119,10 @@
             // console.log(res);
             if(res.Code==1){
                 
-                    window.location.href="http://localhost/tmsproject/login";
+                    window.location.href="login";
                 
              }else{
-                     window.location.href="http://localhost/tmsproject/register";
+                     window.location.href="register";
              }
          });
     }

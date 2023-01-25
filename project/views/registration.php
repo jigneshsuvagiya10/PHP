@@ -59,29 +59,28 @@
 
 <script>
     function registerdata() {
-        // event.preventDefault();
+        event.preventDefault();
         let formdata = $("#regform").serializeArray();
-        console.log(formdata);
+        // console.log(formdata);
         var result = {};
         $.each(formdata, function() {
             result[this.name] = this.value;
         });
-        console.log(result);
+        // console.log(result);
         let form_post_api = {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
-            mode: 'cors', // no-cors, *cors, same-origin
-            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-            credentials: 'same-origin', // include, *same-origin, omit
-            headers: {
-                'Content-Type': 'application/json'
-            },
             body: JSON.stringify(result) // body data type must match "Content-Type" header
         };
-        console.log(form_post_api);
-        fetch("http://localhost/php/API/registration", 
+        // console.log(form_post_api);
+        fetch("http://localhost/php/API/registration",
             form_post_api
         ).then(response => response.json()).then((res) => {
             console.log(res);
+            if (res.code == 1) {
+                window.location.href = "login";
+            } else {
+                
+            }
         })
     }
 

@@ -36,6 +36,10 @@ class controller extends model
                     include_once('Views/login.php');
                     break;
 
+                case '/logout':
+                    setcookie("access_id", '', time() - 7000000);
+                    header("location:login");
+
                 case '/register':
                     include_once('Views/header.php');
                     include_once('Views/registration.php');

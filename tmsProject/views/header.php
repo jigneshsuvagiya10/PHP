@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,8 +19,17 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <link rel="stylesheet" href="<?php echo $BaseURL;?>css/style.css">
-
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="<?php echo $this->BaseURLDynamic;?>lib/jquery.js"></script>
+	<script defer src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
+    <style>
+        .button1{
+            background-color: #0071bc;
+            color :#fff;
+            border-radius: 10px;
+        
+        }
+    </style>
 
 </head>
 
@@ -37,8 +47,8 @@
                 <div class="col">
                     <div class="header_text">
                         <ul>
-                            <li><a href="home">home</a></li>
-                            <li class="dropdown"><a href="ourcorse">Our Course<i
+                        <li><a href="home">HOME</a></li>
+                            <li class="dropdown"><a href="currentaffair">COURSE<i
                                         class="fa-solid fa-caret-down"></i></a>
                                 <ul class="dropdown-nav">
                                     <li><a href="jee">JEE</a></li>
@@ -46,21 +56,49 @@
                                     
                                 </ul>
                             </li>
-                            <!-- <li><a href="material">Materials</a></li> -->
-                            <li><a href="contact">Contact Us</a></li>
-                            <li><a href="about">About Us</a></li>
+                            <!-- <li><a href="material">MATERIALS</a></li> -->
+                            <li><a href="contact">CONTACT US</a></li>
+                            <li><a href="about">ABOUT US</a></li>
+                            <!-- <?php //if(isset($_SESSION['UserData'])){?>
+                            <li ><a href="login"><button href="login" type="submit" class="button button1">LOGIN</button></a></li>
+                            <li ><a href="signup"><button href="signup" type="submit" class="button button1">SIGN UP</button></a></li>
+                            <?php //} ?> -->
                         </ul>
                     </div>
                 </div>
+                <?php if(isset($_COOKIE["access_id"])){?>
+                    <div class="col">
+                    <div class="header_text  align-items">
+                        <ul>
+                            <li class="dropdown" ><a href="profile"><button class="button button1">YOUR PROFILE</button></a>
+                            <ul class="dropdown-nav">
+                                    <li><a href="#">JEE</a></li>
+                                    <li><a href="logout">LOGOUT</a></li>
+                                    
+                                </ul>
+                            </li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                
+                <?php } elseif(isset($_SESSION['UserData'])){?>
+                    <div class="col">
+                            <a href="login"><button class="button button1">LOGIN</button></a>
+                            <a href="register"><button class="button button1">SIGN UP</button></a>
+                    </div>
+                <?php } else{?>
                 <div class="col">
                     <div class="number">
                         <ul>
                             <li><a href="#"><i class="fa-solid fa-phone"></i></a></li>
-                            <li class="fon_number"><a href="#">+91 8908909988</a></li>
+                            <li class="fon_number"><a href="#">+919876543212</a></li>
+                           
                         </ul>
 
                     </div>
                 </div>
+                <?php } ?>
             </div>
         </div>
     </header>
