@@ -29,12 +29,9 @@ class controller extends model
                     break;
                 case '/alluser':
                     $all = $this->select("user");
-
                     // echo "<pre>";
                     // print_r($all);
-
                     echo json_encode($all);
-
                     break;
                 case '/adminhome':
 
@@ -108,6 +105,14 @@ class controller extends model
                         echo "name and password required";
                     }
 
+                    break;
+                case '/deleteuser':
+                    // $data = json_decode(file_get_contents('php://input'), true);
+                    // print_r($data);
+                    $reg = $this->delete("user", array("no"=> $_REQUEST['no']));
+                    // if ($_REQUEST['no'] != "" ) {
+                        echo json_encode($reg);
+                    // }
                     break;
             }
         } else {

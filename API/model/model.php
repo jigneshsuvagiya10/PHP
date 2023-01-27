@@ -109,7 +109,34 @@ class model{
         return $responsedata;
     }
     public function update(){}
-    public function delete(){}
+    public function delete($tbl,$where){
+        $sql = " DELETE FROM $tbl ";
+        $sql .= " WHERE ";
+        
+        foreach ($where as $key => $value) {
+            $sql .= " $key = '$value' AND ";
+        }
+        // echo $sql;
+        $sql = rtrim($sql, "AND");
+        echo $sql;
+
+        $SQLEx = $this->connection->query($sql);
+        echo $SQLEx;
+
+        if ($SQLEx > 0) {
+            $responsedata['code'] = "1";
+            $responsedata['msg'] = "SUCCSESS";
+            $responsedata['data'] = "1";
+        } else {
+            $responsedata['code'] = "0";
+            $responsedata['msg'] = "ERROR WHILE INSERTING";
+            $responsedata['data'] = "0";
+        }
+        // echo "<pre>";
+        // print_r($sql);
+        // echo "</pre>";
+        return $responsedata;
+    }
 }
 
 ?>

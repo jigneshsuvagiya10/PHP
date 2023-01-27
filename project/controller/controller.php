@@ -36,6 +36,12 @@ class controller {
                 include_once("views/admin/adminhome.php");
                 include_once("views/admin/adminfooter.php");
                 break;
+            case '/allusers':
+                
+                include_once("views/admin/adminheader.php");
+                include_once("views/admin/allusers.php");
+                include_once("views/admin/adminfooter.php");
+                break;
             case '/services':
                 
                 include_once("views/header.php");
