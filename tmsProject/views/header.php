@@ -20,7 +20,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="<?php echo $this->BaseURLDynamic;?>lib/jquery.js"></script>
+    <script src="<?php echo $BaseURL;?>lib/jquery.js"></script>
 	<script defer src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
     <style>
         .button1{

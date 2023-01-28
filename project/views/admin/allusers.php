@@ -53,27 +53,32 @@
     <script>
         function deletedata(no) {
             fetch("http://localhost/php/API/deleteuser?no="+no).then((res) => res.json()).then((result) => {
-                console.log(result);
+                // console.log(result);
+                userdata()
             }) 
         }
-        fetch("http://localhost/php/API/alluser").then(res => res.json()).then(result => {
-            console.log(result.data);
-            htmltbl = '';
-            count=1
-            result.data.forEach(element => {
-                console.log(element);
-                htmltbl += `<tr>
-                                <td>${count}</td>
-                                <td>${element.name}</td>
-                                <td>${element.email}</td>
-                                <td>${element.mobile}</td>
-                                <td><button onclick=deletedata(${element.no})>delete</button></td>
-                            </tr>`
-                count++;
-            });
-            document.getElementById("dispdata").innerHTML=htmltbl
-            console.log(htmltbl);
-        })
+        
+        function userdata() {
+            fetch("http://localhost/php/API/alluser").then(res => res.json()).then(result => {
+                // console.log(result.data);
+                htmltbl = '';
+                count=1
+                result.data.forEach(element => {
+                    // console.log(element);
+                    htmltbl += `<tr>
+                                    <td>${count}</td>
+                                    <td>${element.name}</td>
+                                    <td>${element.email}</td>
+                                    <td>${element.mobile}</td>
+                                    <td><button onclick=deletedata(${element.no})>delete</button></td>
+                                </tr>`
+                    count++;
+                });
+                document.getElementById("dispdata").innerHTML=htmltbl
+                // console.log(htmltbl);
+            })
+        }
+        userdata()
     </script>
 
 </main><!-- End #main -->

@@ -65,6 +65,14 @@ class model{
     public function select($tbl){
 
         $sql ="SELECT * FROM $tbl ";
+        // if ($where != "") {
+        //     $sql .= " WHERE ";
+            
+        //     foreach ($where as $key => $value) {
+        //         $sql .= " $key = '$value' AND";
+        //     }
+        //     $sql = rtrim($sql, "AND");
+        // }
         $SQLEx = $this->connection->query($sql); 
 
         if ($SQLEx->num_rows > 0) {
@@ -109,19 +117,20 @@ class model{
         return $responsedata;
     }
     public function update(){}
-    public function delete($tbl,$where){
+    public function delete($tbl,$where=""){
         $sql = " DELETE FROM $tbl ";
-        $sql .= " WHERE ";
-        
-        foreach ($where as $key => $value) {
-            $sql .= " $key = '$value' AND ";
+        if ($where != "") {
+            $sql .= " WHERE ";
+            
+            foreach ($where as $key => $value) {
+                $sql .= " $key = '$value' AND";
+            }
+            $sql = rtrim($sql, "AND");
         }
         // echo $sql;
-        $sql = rtrim($sql, "AND");
-        echo $sql;
-
+        // echo $sql;
         $SQLEx = $this->connection->query($sql);
-        echo $SQLEx;
+        // echo $SQLEx;
 
         if ($SQLEx > 0) {
             $responsedata['code'] = "1";
