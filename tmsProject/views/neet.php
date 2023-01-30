@@ -11,6 +11,7 @@
                     
                         <h2 class="abc">NEET</h2>
                         <h3>NATIONAL ELIGIBILITY CUM ENTRANCE TEST</h3>
+                        <a href="register"><button class="button button1">REGISTER</button></a>
                 </div>
             </center>
             

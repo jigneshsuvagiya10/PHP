@@ -7,6 +7,7 @@ class controller extends model
         parent::__construct();
 
         $BaseURL = "http://localhost/php/tmsProject/assets/";
+        $admin_url = "http://localhost/php/tmsProject/assets/adminassets/";
         if (isset($_SERVER['PATH_INFO'])) {
             switch ($_SERVER['PATH_INFO']) {
                 case '/home':
@@ -38,7 +39,7 @@ class controller extends model
 
                 case '/logout':
                     setcookie("access_id", '', time() - 7000000);
-                    header("location:login");
+                    header("location:home");
 
                 case '/register':
                     include_once('Views/header.php');
@@ -84,7 +85,17 @@ class controller extends model
                     break;
                 case '/admindashboard':
                     include_once('Views/admin/adminheader.php');
-                    include_once('Views/admin/admindashboard.php');
+                    include_once('Views/admin/adminhome.php');
+                    include_once('Views/admin/adminfooter.php');
+                    break;
+                case '/allusers':
+                    include_once('Views/admin/adminheader.php');
+                    include_once('Views/admin/allusers.php');
+                    include_once('Views/admin/adminfooter.php');
+                    break;
+                case '/inquirydata':
+                    include_once('Views/admin/adminheader.php');
+                    include_once('Views/admin/inquirydata.php');
                     include_once('Views/admin/adminfooter.php');
                     break;
 

@@ -48,7 +48,7 @@
                     <div class="header_text">
                         <ul>
                         <li><a href="home">HOME</a></li>
-                            <li class="dropdown"><a href="currentaffair">COURSE<i
+                            <li class="dropdown"><a href="#">COURSE<i
                                         class="fa-solid fa-caret-down"></i></a>
                                 <ul class="dropdown-nav">
                                     <li><a href="jee">JEE</a></li>
@@ -91,8 +91,8 @@
                 <div class="col">
                     <div class="number">
                         <ul>
-                            <li><a href="#"><i class="fa-solid fa-phone"></i></a></li>
-                            <li class="fon_number"><a href="#">+919876543212</a></li>
+                            <!-- <li><a href="#"><i class="fa-solid fa-phone"></i></a></li> -->
+                            <a href="login"><button class="button button1">LOGIN</button></a>
                            
                         </ul>
 

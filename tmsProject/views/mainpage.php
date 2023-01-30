@@ -489,13 +489,13 @@
         fetch("http://localhost/php/tmsProject/API/inquiry", post).then(res => res.json()).then((response) => {
             console.log(response);
             if (response.Code == 1) {
-                window.location.href = "http://localhost/php/tmsProject/register";
-                // if (response.Data.course == "JEE") {
-                //     window.location.href = "http://localhost/php/tmsProject/jee";
-                // }
-                // if (response.Data.course == "NEET") {
-                //     window.location.href = "http://localhost/php/tmsProject/neet";
-                // }
+                // window.location.href = "http://localhost/php/tmsProject/register";
+                if (response.Data.course == "JEE") {
+                    window.location.href = "http://localhost/php/tmsProject/jee";
+                }
+                if (response.Data.course == "NEET") {
+                    window.location.href = "http://localhost/php/tmsProject/neet";
+                }
             } else {
             
             }

@@ -19,6 +19,7 @@
                     
                         <h2 class="abc">JEE</h2>
                         <h3>JEE-Main | JEE-Advanced</h3>
+                        <a href="register"><button class="button button1">REGISTER</button></a>
                 </div>
                 </center>
         

@@ -9,6 +9,9 @@ class controller extends model
         parent::__construct();
         if (isset($_SERVER['PATH_INFO'])) {
             switch ($_SERVER['PATH_INFO']) {
+                case '/home':
+                    echo "API EXP";
+                    break;
                 case '/inquiry':
                     $data = json_decode(file_get_contents('php://input'), true);
                     if ($data['name'] != "") {
@@ -39,6 +42,32 @@ class controller extends model
                     } else {
                         echo "Username and password is required.";
                     }
+
+                    break;
+
+                case '/alluser':
+                    $all = $this->select("users");
+                    // echo "<pre>";
+                    // print_r($all);
+                    echo json_encode($all);
+                    break;
+                case '/deleteuser':
+                    // $data = json_decode(file_get_contents('php://input'), true);
+                    // print_r($data);
+                    $reg = $this->delete("users", array("user_id" => $_REQUEST['user_id']));
+                    // if ($_REQUEST['no'] != "" ) {
+                    echo json_encode($reg);
+                    // }
+                    break;
+                case '/inquirydata':
+                    $all = $this->select("inquiry");
+                    echo json_encode($all);
+                    break;
+
+                case '/deleteinquiry':
+                    $reg = $this->delete("inquiry", array("visiter_id" => $_REQUEST['visiter_id']));
+                    echo json_encode($reg);
+                    break;
 
                 default:
                     # code...

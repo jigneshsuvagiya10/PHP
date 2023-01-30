@@ -49,6 +49,67 @@ class model {
         return $ResponseData;
 
     }
+
+    public function delete($tbl,$where=""){
+        $sql = " DELETE FROM $tbl ";
+        if ($where != "") {
+            $sql .= " WHERE ";
+            
+            foreach ($where as $key => $value) {
+                $sql .= " $key = '$value' AND";
+            }
+            $sql = rtrim($sql, "AND");
+        }
+        // echo $sql;
+        // echo $sql;
+        $SQLEx = $this->connection->query($sql);
+        // echo $SQLEx;
+
+        if ($SQLEx > 0) {
+            $responsedata['code'] = "1";
+            $responsedata['msg'] = "SUCCSESS";
+            $responsedata['data'] = "1";
+        } else {
+            $responsedata['code'] = "0";
+            $responsedata['msg'] = "ERROR WHILE INSERTING";
+            $responsedata['data'] = "0";
+        }
+        // echo "<pre>";
+        // print_r($sql);
+        // echo "</pre>";
+        return $responsedata;
+    }
+
+    public function select($tbl){
+
+        $sql ="SELECT * FROM $tbl ";
+        // if ($where != "") {
+        //     $sql .= " WHERE ";
+            
+        //     foreach ($where as $key => $value) {
+        //         $sql .= " $key = '$value' AND";
+        //     }
+        //     $sql = rtrim($sql, "AND");
+        // }
+        $SQLEx = $this->connection->query($sql); 
+
+        if ($SQLEx->num_rows > 0) {
+            
+            while ($SQLExFetch = $SQLEx->fetch_object()) {
+            
+                $sqlfetchdata[]= $SQLExFetch;
+            }
+            $responsedata['code'] = "1";
+            $responsedata['msg'] = "SUCCSESS";
+            $responsedata['data'] = $sqlfetchdata;
+        } else {
+            $responsedata['code'] = "0";
+            $responsedata['msg'] = "ERROR WHILE INSERTING";
+            $responsedata['data'] = "0";
+        }
+        
+        return $responsedata;
+    }
 }
 
 ?>
