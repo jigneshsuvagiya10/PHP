@@ -59,6 +59,10 @@ class controller extends model
                     echo json_encode($reg);
                     // }
                     break;
+                case '/edituser':
+                    $reg = $this->select("users", array("user_id" => $_REQUEST['user_id']));
+                    echo json_encode($reg);
+                    break;
                 case '/inquirydata':
                     $all = $this->select("inquiry");
                     echo json_encode($all);

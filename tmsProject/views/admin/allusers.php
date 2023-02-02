@@ -55,17 +55,21 @@
     </section>
     <script>
         function deletedata(no) {
-            fetch("http://localhost/php/tmsProject/API/deleteuser?user_id="+no).then((res) => res.json()).then((result) => {
+            fetch("http://localhost/php/tmsProject/API/deleteuser?user_id=" + no).then((res) => res.json()).then((result) => {
                 // console.log(result);
                 userdata()
-            }) 
+            })
         }
-        
+
+        function edituser(id) {
+            window.location.href = "edituser?user_id=" + id
+        }
+
         function userdata() {
             fetch("http://localhost/php/tmsProject/API/alluser").then(res => res.json()).then(result => {
                 // console.log(result.data);
                 htmltbl = '';
-                count=1
+                count = 1
                 result.data.forEach(element => {
                     // console.log(element);
                     htmltbl += `<tr>
@@ -76,15 +80,19 @@
                                     <td>${element.user_gender}</td>
                                     <td>${element.user_course}</td>
                                     <td>${element.user_class}</td>
-                                    <td><button onclick=deletedata(${element.user_id})>delete</button></td>
+                                    <td>
+                                    <button onclick=edituser(${element.user_id})>Edit</button>
+                                    <button onclick=deletedata(${element.user_id})>delete</button>
+                                    </td>
                                 </tr>`
                     count++;
                 });
-                document.getElementById("dispdata").innerHTML=htmltbl
+                document.getElementById("dispdata").innerHTML = htmltbl
                 // console.log(htmltbl);
             })
         }
         userdata()
     </script>
-
 </main><!-- End #main -->
+
+<!-- <a href="userdatabyid?user_id=${element.user_id}">Edit</a> -->

@@ -54,7 +54,6 @@ class model {
         $sql = " DELETE FROM $tbl ";
         if ($where != "") {
             $sql .= " WHERE ";
-            
             foreach ($where as $key => $value) {
                 $sql .= " $key = '$value' AND";
             }
@@ -74,29 +73,22 @@ class model {
             $responsedata['msg'] = "ERROR WHILE INSERTING";
             $responsedata['data'] = "0";
         }
-        // echo "<pre>";
-        // print_r($sql);
-        // echo "</pre>";
         return $responsedata;
     }
 
-    public function select($tbl){
+    public function select($tbl,$where=""){
 
         $sql ="SELECT * FROM $tbl ";
-        // if ($where != "") {
-        //     $sql .= " WHERE ";
-            
-        //     foreach ($where as $key => $value) {
-        //         $sql .= " $key = '$value' AND";
-        //     }
-        //     $sql = rtrim($sql, "AND");
-        // }
+        if ($where != "") {
+            $sql .= " WHERE ";
+            foreach ($where as $key => $value) {
+                $sql .= " $key = '$value' AND";
+            }
+            $sql = rtrim($sql, "AND");
+        }
         $SQLEx = $this->connection->query($sql); 
-
         if ($SQLEx->num_rows > 0) {
-            
             while ($SQLExFetch = $SQLEx->fetch_object()) {
-            
                 $sqlfetchdata[]= $SQLExFetch;
             }
             $responsedata['code'] = "1";

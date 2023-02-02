@@ -93,6 +93,11 @@ class controller extends model
                     include_once('Views/admin/allusers.php');
                     include_once('Views/admin/adminfooter.php');
                     break;
+                case '/edituser':
+                    include_once('Views/admin/adminheader.php');
+                    include_once('Views/admin/edituser.php');
+                    include_once('Views/admin/adminfooter.php');
+                    break;
                 case '/inquirydata':
                     include_once('Views/admin/adminheader.php');
                     include_once('Views/admin/inquirydata.php');
