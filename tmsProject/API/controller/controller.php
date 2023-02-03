@@ -33,6 +33,14 @@ class controller extends model
                     }
 
                     break;
+                case '/updateuser':
+                    $data = json_decode(file_get_contents("php://input"), true);
+                    // print_r($data);
+                    // exit;
+                    $Res = $this->update("users", $data,array('user_id'=> $data["user_id"]));
+                    echo json_encode($Res);
+
+                    break;
 
                 case '/loginuser':
                     $data = json_decode(file_get_contents('php://input'), true);

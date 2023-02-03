@@ -25,6 +25,7 @@
   <link href="<?php echo $admin_url;?>vendor/quill/quill.bubble.css" rel="stylesheet">
   <link href="<?php echo $admin_url;?>vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="<?php echo $admin_url;?>vendor/simple-datatables/style.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
   <!-- Template Main CSS File -->
   <link href="<?php echo $admin_url;?>css/style.css" rel="stylesheet">
