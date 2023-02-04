@@ -71,6 +71,10 @@ class controller extends model
                     $reg = $this->select("users", array("user_id" => $_REQUEST['user_id']));
                     echo json_encode($reg);
                     break;
+                case '/userprofile':
+                    $reg = $this->select("users", array("user_id" => $_COOKIE['access_id']));
+                    echo json_encode($reg);
+                    break;
                 case '/inquirydata':
                     $all = $this->select("inquiry");
                     echo json_encode($all);

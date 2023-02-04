@@ -81,9 +81,9 @@
 
 
          fetch("http://localhost/php/tmsProject/API/loginuser", header_for_post).then(response => response.json()).then((res) => {
-            //  console.log(res);
+            //  console.log(res.Data);
              if(res.Code==1){
-                document.cookie=`access_id=${res.Data[0].user_email}`;
+                document.cookie=`access_id=${res.Data[0].user_id}`;
                 if (res.Data[0].role_id==1) {
                     window.location.href="http://localhost/php/tmsProject/admindashboard";
                 }else{

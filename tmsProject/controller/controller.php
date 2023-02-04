@@ -83,6 +83,11 @@ class controller extends model
                     include_once('Views/conditions.php');
                     include_once('Views/footer.php');
                     break;
+                case '/userprofile':
+                    // include_once('Views/header.php');
+                    include_once('Views/userprofile.php');
+                    // include_once('Views/footer.php');
+                    break;
                 case '/admindashboard':
                     include_once('Views/admin/adminheader.php');
                     include_once('Views/admin/adminhome.php');

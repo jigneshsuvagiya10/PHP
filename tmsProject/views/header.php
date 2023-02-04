@@ -70,7 +70,7 @@
                     <div class="col">
                     <div class="header_text  align-items">
                         <ul>
-                            <li class="dropdown" ><a href="profile"><button class="button button1">YOUR PROFILE</button></a>
+                            <li class="dropdown" ><a href="userprofile"><button class="button button1">YOUR PROFILE</button></a>
                             <ul class="dropdown-nav">
                                     <li><a href="#">JEE</a></li>
                                     <li><a href="logout">LOGOUT</a></li>
