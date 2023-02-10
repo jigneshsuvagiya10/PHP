@@ -17,7 +17,9 @@
                 <h1>Edit Profile</h1>
             </div>
             <div class="col-6">
-                <a href="home"><h5>GO TO HOME PAGE</h5></a>
+                <a href="home">
+                    <h5>GO TO HOME PAGE</h5>
+                </a>
             </div>
         </div>
         <hr>
@@ -107,6 +109,34 @@
             console.log(res);
         });
     }
+
+    // function update(){
+    //     event.preventDefault();
+    //     let FormData = $("#edituserpro").serializeArray();
+    //     // console.log(FormData);
+    //     var result = {};
+    //     $.each(FormData, function() {
+    //         result[this.name] = this.value;
+    //     });
+
+    //     $.ajax({
+
+    //         // type:"POST",
+    //         // data:"result",
+            
+    //         url:"http://localhost/php/tmsProject/API/updateuser",
+    //         success:function(response){
+    //             JSON.parse()
+
+    //             console.log();
+    //         }
+
+
+    //     });
+
+
+
+    // }
     // let no = document.cookie.value
     // console.log(no);
     function userprofile() {
