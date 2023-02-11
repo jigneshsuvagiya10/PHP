@@ -1,0 +1,13 @@
+composer
+
+composer create-project laravel/laravel project     [create new project]
+
+php artisan serve   [for project run (cmd in project folder)]
+
+
+composer require laravel/ui
+
+
+
+
+
