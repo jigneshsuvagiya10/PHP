@@ -11,3 +11,19 @@ composer require laravel/ui
 
 
 
+
+add table in database =>php artisan make:migration create_product_table
+
+        		    =>php artisan migrate
+
+add new clm in table =>php artisan make:migration add_productclm_table --table=product
+
+			   =>php artisan migrate
+
+add random value in table =>php artisan make:seeder productSeeder
+
+				  =>php artisan db:seed --class=productSeeder
+
+
+
+
