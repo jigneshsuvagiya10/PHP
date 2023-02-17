@@ -20,6 +20,10 @@ Route::get('/', function () {
 Route::get('/anything', function () {
     dd("testing");
 });
+
+Route::view('/viewtest', 'testingview');
+Route::view('/admindashbord', 'admin.admindashbord');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
