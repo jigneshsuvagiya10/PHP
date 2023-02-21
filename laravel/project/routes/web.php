@@ -27,3 +27,7 @@ Route::view('/admindashbord', 'admin.admindashbord');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/product', [App\Http\Controllers\ProductController::class, 'index']);
+Route::get('/deletepro/{id}', [App\Http\Controllers\ProductController::class, 'destroy']);
+Route::get('/addproduct', [App\Http\Controllers\ProductController::class, 'create']);
+Route::get('/add', [App\Http\Controllers\ProductController::class, 'store']);

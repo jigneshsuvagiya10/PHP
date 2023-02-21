@@ -1,0 +1,100 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\product;
+use Illuminate\Http\Request;
+
+class ProductController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index(product $products)
+    {
+        // dd("pcontroller index");
+        // $name = 'some one';
+        // $email = 'someone@gmail.com';
+        // $date = date('Y-m-d');
+        // return view('admin.product', compact('name', 'email', 'date'));
+        $allprod = $products::get();
+        // dd($allprod);
+        return view('admin.product', compact('allprod'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('admin.addproduct');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store( product $product, Request $request)
+    {
+        $product->product_title = $request->product_title;
+        $product->product_description = $request->product_description;
+        $product->product_quantity = $request->product_quantity;
+        $product->product_price = $request->product_price;
+        $product->save();
+        return redirect("product");
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function show(product $product)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(product $product)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, product $product)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id,product $product)
+    {
+        $probyid = $product::find($id);
+        // dd($probyid);
+        $probyid->delete();
+        return redirect("product");
+    }
+}
