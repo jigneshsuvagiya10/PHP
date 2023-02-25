@@ -16,13 +16,13 @@
 
                     <table class="table table-striped table-bordered">
                         <thead>
-                        <tr>
-                            <th>Title</th>
-                            <th>Description</th>
-                            <th>Quantity</th>
-                            <th>Price</th>
-                            <th>Action</th>
-                        </tr>
+                            <tr>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
                         </thead>
                         <tbody>
                             @foreach($allprod as $data)
@@ -31,7 +31,10 @@
                                 <td>{{$data->product_description}}</td>
                                 <td>{{$data->product_quantity}}</td>
                                 <td>{{$data->product_price}}</td>
-                                <td><a href="deletepro/{{$data->id}}">Delete</a></td>
+                                <td>
+                                    <a href="deletepro/{{$data->id}}">Delete</a>
+                                    <a href="editpro/{{$data->id}}">Edit</a>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>

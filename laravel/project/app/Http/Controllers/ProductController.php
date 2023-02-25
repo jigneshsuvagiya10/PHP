@@ -67,9 +67,11 @@ class ProductController extends Controller
      * @param  \App\Models\product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(product $product)
+    public function edit($id,product $product)
     {
-        //
+        $editpro = $product::find($id);
+        // dd($editpro);
+        return view('admin.editproduct', compact('editpro'));
     }
 
     /**
@@ -79,9 +81,16 @@ class ProductController extends Controller
      * @param  \App\Models\product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, product $product)
+    public function update($id,Request $request, product $product)
     {
-        //
+        $update = $product::find($id);
+
+        $update->product_title = $request->product_title;
+        $update->product_description = $request->product_description;
+        $update->product_quantity = $request->product_quantity;
+        $update->product_price = $request->product_price;
+        $update->save();
+        return redirect("product");
     }
 
     /**

@@ -4,9 +4,15 @@ composer create-project laravel/laravel project     [create new project]
 
 php artisan serve   [for project run (cmd in project folder)]
 
+php artisan serve --port 8000
 
 composer require laravel/ui
 
+php artisan ui bootstrap
+
+npm install && npm run dev
+
+php artisan ui bootstrap --auth
 
 
 
@@ -26,6 +32,11 @@ add random value in table =>php artisan make:seeder productSeeder
 
 
 create model controller and table => php artisan make:model product -mcr
+
+
+@confid file create =>php artisan config:cache
+		
+				=>php artisan route:clear
 
 
 

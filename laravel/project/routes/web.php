@@ -30,4 +30,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/product', [App\Http\Controllers\ProductController::class, 'index']);
 Route::get('/deletepro/{id}', [App\Http\Controllers\ProductController::class, 'destroy']);
 Route::get('/addproduct', [App\Http\Controllers\ProductController::class, 'create']);
-Route::get('/add', [App\Http\Controllers\ProductController::class, 'store']);
+Route::post('/add', [App\Http\Controllers\ProductController::class, 'store']);
+
+Route::get('/editpro/{id}', [App\Http\Controllers\ProductController::class, 'edit']);
+Route::put('/editpro/updatepro/{id}', [App\Http\Controllers\ProductController::class, 'update']);
