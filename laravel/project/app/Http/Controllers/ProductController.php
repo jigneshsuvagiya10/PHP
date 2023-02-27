@@ -71,6 +71,7 @@ class ProductController extends Controller
     {
         $editpro = $product::find($id);
         // dd($editpro);
+
         return view('admin.editproduct', compact('editpro'));
     }
 
@@ -99,7 +100,7 @@ class ProductController extends Controller
      * @param  \App\Models\product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id,product $product)
+    public function destroy($id ,product $product)
     {
         $probyid = $product::find($id);
         // dd($probyid);
