@@ -25,20 +25,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($allprod as $data)
-                            <tr>
-                                <td>{{$data->product_title}}</td>
-                                <td>{{$data->product_description}}</td>
-                                <td>{{$data->product_quantity}}</td>
-                                <td>{{$data->product_price}}</td>
-                                <td>
-                                    <a href="deletepro/{{$data->id}}">Delete</a>
-                                    <a href="editpro/{{$data->id}}">Edit</a>
-                                </td>
-                            </tr>
-                            @endforeach
+                            
                         </tbody>
                     </table>
+
+                    <script>
+                        fetch("http://localhost:8000/api/allproduct").then((response)=>response.json()).then((res)=>{
+                            console.log(res);
+                        });
+                    </script>
                 </div>
             </div>
         </div>

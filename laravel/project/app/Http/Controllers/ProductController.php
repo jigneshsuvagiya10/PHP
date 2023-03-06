@@ -19,9 +19,16 @@ class ProductController extends Controller
         // $email = 'someone@gmail.com';
         // $date = date('Y-m-d');
         // return view('admin.product', compact('name', 'email', 'date'));
-        $allprod = $products::get();
+        // $allprod = $products::get();
         // dd($allprod);
-        return view('admin.product', compact('allprod'));
+        return view('admin.product');  //, compact('allprod'));
+    }
+    public function allproduct(product $products)
+    {
+        // dd("hiii");
+        $allprod = $products::get();
+        // echo $allprod;
+        // return view('admin.product', compact('allprod'));
     }
 
     /**
