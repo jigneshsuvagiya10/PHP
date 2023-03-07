@@ -30,6 +30,8 @@
     <!-- Template Main CSS File -->
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
 
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
     <!-- =======================================================
   * Template Name: NiceAdmin - v2.5.0
   * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
@@ -266,16 +268,16 @@
             </nav>
         </div><!-- End Page Title -->
 
-        <section class="section dashboard">
-            <div class="row">
+        <!-- <section class="section dashboard"> -->
+            <!-- <div class="row"> -->
                 <!-- Left side columns -->
-                <div class="col-lg-8">
-                    <div class="row">
+                <!-- <div class="col-lg-8">
+                    <div class="row"> -->
                         @yield('content')
-                    </div>
-                </div>
-            </div>
-        </section>
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </section> -->
 
 
     </main><!-- End #main -->

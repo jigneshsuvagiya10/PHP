@@ -27,8 +27,25 @@ class ProductController extends Controller
     {
         // dd("hiii");
         $allprod = $products::get();
-        // echo $allprod;
+        echo $allprod;
         // return view('admin.product', compact('allprod'));
+    }
+    public function apiedit($id,product $products)
+    {
+        // dd($id);
+        return $products::find($id);
+        // return view('admin.product', compact('allprod'));
+    }
+    public function insert(product $product, Request $request)
+    {
+        // dd($request->all());
+        $product->product_title = $request->product_title;
+        $product->product_description = $request->product_description;
+        $product->product_quantity = $request->product_quantity;
+        $product->product_price = $request->product_price;
+        $product->save();
+        
+        // return true;
     }
 
     /**
@@ -100,6 +117,17 @@ class ProductController extends Controller
         $update->save();
         return redirect("product");
     }
+    public function updatebyapi($id,Request $request, product $product)
+    {
+        $update = $product::find($id);
+
+        $update->product_title = $request->product_title;
+        $update->product_description = $request->product_description;
+        $update->product_quantity = $request->product_quantity;
+        $update->product_price = $request->product_price;
+        $update->save();
+        // return redirect("product"); 
+    }
 
     /**
      * Remove the specified resource from storage.
@@ -113,5 +141,12 @@ class ProductController extends Controller
         // dd($probyid);
         $probyid->delete();
         return redirect("product");
+    }
+    public function deletebyapi($id ,product $product)
+    {
+        $probyid = $product::find($id);
+        // dd($probyid);
+        $probyid->delete();
+        // return redirect("product");
     }
 }
