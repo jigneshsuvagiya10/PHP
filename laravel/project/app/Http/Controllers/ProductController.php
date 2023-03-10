@@ -30,6 +30,11 @@ class ProductController extends Controller
         echo $allprod;
         // return view('admin.product', compact('allprod'));
     }
+    public function showproduct(product $products)
+    {
+        $prod = $products::get();
+        return view('showproduct', compact('prod'));
+    }
     public function apiedit($id,product $products)
     {
         // dd($id);

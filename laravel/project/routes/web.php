@@ -34,3 +34,5 @@ Route::post('/add', [App\Http\Controllers\ProductController::class, 'store']);
 
 Route::get('/editpro/{id}', [App\Http\Controllers\ProductController::class, 'edit']);
 Route::put('/editpro/updatepro/{id}', [App\Http\Controllers\ProductController::class, 'update']);
+
+Route::get('/showproduct', [App\Http\Controllers\ProductController::class, 'showproduct']);
