@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\cart;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
@@ -12,9 +13,11 @@ class CartController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(cart $cart)
     {
-        //
+        $cartdata = $cart::Join('products', 'products.id','=','carts.product_id')->where('user_id',Auth::user()->id)->get();
+        dd($cartdata);
+        // return view('cart', compact('cartdata'));
     }
 
     /**
@@ -24,10 +27,12 @@ class CartController extends Controller
      */
     public function addtocart($id,cart $cart)
     {
-        $uid = Auth::user()->id;
-        dd($uid);
-        // $cart->product_id = $id;
-        // $cart->user_id = $user->id;;
+            $uid = Auth::user()->id;
+            $cart->product_id = $id;
+            $cart->user_id = $uid;
+            $cart->save();
+
+        return redirect("showproduct");
     }
 
     /**

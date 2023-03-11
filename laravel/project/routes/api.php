@@ -24,5 +24,5 @@ Route::get('/productdatabyid/{id}', [App\Http\Controllers\ProductController::cla
 Route::post('/updatepro/{id}', [App\Http\Controllers\ProductController::class, 'updatebyapi']);
 Route::get('/deleteprobyid/{id}', [App\Http\Controllers\ProductController::class, 'deletebyapi']);
 
-Route::get('/addtocart/{id}', [App\Http\Controllers\CartController::class, 'addtocart']);
+// Route::get('/addtocart/{id}', [App\Http\Controllers\CartController::class, 'addtocart']);
 

@@ -36,3 +36,6 @@ Route::get('/editpro/{id}', [App\Http\Controllers\ProductController::class, 'edi
 Route::put('/editpro/updatepro/{id}', [App\Http\Controllers\ProductController::class, 'update']);
 
 Route::get('/showproduct', [App\Http\Controllers\ProductController::class, 'showproduct']);
+
+Route::middleware('auth:sanctum')->get('/addcart/{id}', [App\Http\Controllers\CartController::class, 'addtocart']);
+Route::get('cart', [App\Http\Controllers\CartController::class, 'index']);

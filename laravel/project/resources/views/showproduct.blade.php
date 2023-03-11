@@ -15,20 +15,20 @@
                     <p class="card-text">{{ $product->product_description }}</p>
                 </div>
                 <div class="card-footer">
-                    <a href="# " onclick="event.preventDefault(); addtocart('{{$product->id}}');" class="btn btn-primary">Add to Cart</a>
-                    <!-- <a href="addcart/{{$product->id}} " class="btn btn-primary">Add to Cart</a> -->
+                    <!-- <a href="# " onclick="event.preventDefault(); addtocart('{{$product->id}}');" class="btn btn-primary">Add to Cart</a> -->
+                    <a href="addcart/{{$product->id}} " class="btn btn-primary">Add to Cart</a>
                 </div>
             </div>
         </div>
         @endforeach
     </div>
 </div>
-<script>
+<!-- <script>
     function addtocart(pid) {
         // console.log(pid);
-        fetch("http://localhost:8000/api/addtocart/" + pid)
+        fetch("http://localhost:8000/api/addtocart/"+pid)
             .then((response) => response.json())
             .then((res) => {});
     }
-</script>
+</script> -->
 @endsection
