@@ -15,7 +15,8 @@ class CartController extends Controller
      */
     public function index(cart $cart)
     {
-        $cartdata = $cart::Join('products', 'products.id','=','carts.product_id')->where('user_id',Auth::user()->id)->get();
+        $uid = Auth::user()->id;
+        $cartdata = $cart::Join('products', 'products.id','=','carts.product_id')->where('user_id', $uid)->get();
         dd($cartdata);
         // return view('cart', compact('cartdata'));
     }

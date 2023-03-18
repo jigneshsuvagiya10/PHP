@@ -38,4 +38,4 @@ Route::put('/editpro/updatepro/{id}', [App\Http\Controllers\ProductController::c
 Route::get('/showproduct', [App\Http\Controllers\ProductController::class, 'showproduct']);
 
 Route::middleware('auth:sanctum')->get('/addcart/{id}', [App\Http\Controllers\CartController::class, 'addtocart']);
-Route::get('cart', [App\Http\Controllers\CartController::class, 'index']);
+Route::middleware('auth:sanctum')->get('/cart', [App\Http\Controllers\CartController::class, 'index']);
