@@ -49,7 +49,7 @@
             <div class="row align-items">
                 
                   
-                    <form class="  forme_color"  method="post" id="loginform">
+                    <form class="forme_color"  method="post" id="loginform">
                           
                     <div class="se_7_text"><br>
                         <h4>...LOGIN...</h4>

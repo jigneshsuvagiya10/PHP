@@ -95,7 +95,6 @@
                         }
                         function deletepro(pid) {
                             // console.log(pid);
-                            // fetch(`http://localhost:8000/api/productdatabyid/${pid}`)
                             fetch("http://localhost:8000/api/deleteprobyid/"+pid)
                                 .then((response) => response.json())
                                 .then((res) => {
