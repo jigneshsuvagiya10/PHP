@@ -2,7 +2,7 @@
     <div class="row mt-5">
         <div class="offset-3 col-md-6 mt-3">
             <div class="card">
-                <form method="post" action="home">
+                <form method="post" action="">
                 <div class="card-header">REGISTRATION FORM</div>
                 <div class="card-body">
                         <div class="row mt-2">
@@ -51,7 +51,7 @@
                     </div>
                     <div class="card-footer">
                         <div class="col text-center">
-                            <input type="submit" class="btn btn-primary" name="reg" id="res" value="Submit">
+                            <input type="submit" class="btn btn-primary" name="reg" id="reg" value="Submit">
                         </div>
                     </div>
                 </form>

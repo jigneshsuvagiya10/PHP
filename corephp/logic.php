@@ -48,14 +48,28 @@ echo "<br><br>";
 $arr = [10, 5, 47, 3, 43, 6, 5];
 $u_arr = [];
 
+// foreach ($arr as $value) {
+//     if (!in_array($value, $u_arr)) {
+//         $u_arr[] = $value;
+//     }
+// }
 foreach ($arr as $value) {
-    if (!in_array($value, $u_arr)) {
-        $u_arr[] = $value;
+    foreach ($u_arr as $u_value) {
+        if ($u_value == $value) {
+            continue 2;
+        }
     }
+    $u_arr[] = $value;
 }
 print_r($u_arr);
 
+for ($i=1; $i < 17; $i=$i+3) { 
+    echo $i."<br>";
+}
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
