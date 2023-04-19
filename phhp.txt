@@ -1,0 +1,135 @@
+array => array store multipal value in single veriable
+
+srting => string is a seceqance of caractors 
+
+
+arry function:
+
+arry_chunk("$arr","2)
+array_columb()=>arr clm value
+array_combine()=> 2 arr combine as key = value
+array_count_values()=> count value in singe arry
+array_diff()=>give val which are not in secone arry
+arry_fill()=> 
+
+str function:
+
+addcslashes()=> input / in front of charector
+bin2hex()=>return hexadecimal value of str
+chop()=>white space and charactor remove
+chr()=>return char from ascii value
+
+php=> php stande for : heipertext preprosesor. php is a server side scripting language
+	php used for creat dynamic wep pages and application
+
+laravel=> is a open sorce web aplication framework of php  
+
+artisan=> artican is a comand line tool, for laravel to help devloper to creat application
+
+class=> user define dtatype combain variable,local data and function
+
+variable=> name of the memory location that hold data => variable declar in php with $(dollor) sine
+
+composer=> packge manager , instal laravel packeges and library
+
+function=> is block of codes, it's perform specific task and can be reused in program
+
+sesson=> is way to store information about user across multipal pages
+
+GET & POST => are two method for submiting data to web serve
+		->GET submit data as part of URL 
+		->POST submit data in the body of the HTTP requast
+
+what is the purpose og echo statemant => its used to output text
+
+Blade=> template engine ->used to create reuseable and clean template
+
+
+
+*OOPS*
+
+accsesmodifire=> public=> accsess avery we
+					 ,protected=>accsess class and theair child class
+					 ,private=>accses only class
+
+Encapsulation=>wraping a data in a single unit
+
+Megicn method=>__get->__get($name)->only name pass in argument
+					__set->__set($name,$value)->name and value pass un argument
+ 					__call->__call($function,$argument)->function and argument pass
+
+
+scope resolution=>by help it without create object we can call static function out of calss ->::
+
+abstraction=> means hide someone
+				->abstractio function declare in abstraction class
+				->abstaction class can not able to create object
+
+constractor=>constractor is a method wich is invoke by default when object are created
+				->con never reaturn ->used for init some value
+
+datamember=>dtm is a variable ->wich is use for intire class
+
+final class=>any class can not extend final calss 
+
+final method=>final method(function) can not overwrite
+
+inheritance => single saport / multipal not saport 
+
+
+======================
+
+sesson and cookie : sessone store data in web serve -/- cookies store data in user computer
+			  sessone are secur than cookie // cookie can modife by user sesson can not 
+	data size : cookie have size limit around 4kb //sesson have not size limit
+
+
+
+
+
+improving my skills and staying uptodate with the latest technologies
+
+=======================
+
+LARAVEL:
+
+seeder : add random value in table
+
+midelwere : midelwere act as a bridge between the client and application 
+
+
+
+
+
+=========================
+
+composer create-project laravel/laravel project-name
+
+php artisan serve
+
+composer require laravel/ui
+
+php artisan ui bootstrap
+
+npm install && npm run dev
+
+php artisan ui bootstrap --auth 
+
+php artisan make:model name -mcr
+
+php artisan make:migration create_name_table
+
+php artisan make:seeder nameseeder
+
+php artisan migrate
+
+
+
+
+
+
+
+
+
+
+
